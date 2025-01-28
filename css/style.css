@@ -36,7 +36,7 @@ input[type="text"] {
     border-radius: 5px;
     font-size: clamp(16px, 1.5vw, 18px);
     text-align: center;
-}
+}       
 
 button {
     background: #007bff;
@@ -68,4 +68,8 @@ button:hover {
 
 .informacion {
     font-size: clamp(10px, 1.5vw, 18px);
+}
+
+img {
+    width: clamp(100px, 75%, 380px);
 }

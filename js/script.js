@@ -2,7 +2,6 @@ document.getElementById("validarButton").addEventListener("click", async () => {
     const input = document.getElementById("cadenaInput").value;
     const resultDiv = document.getElementById("result");
 
-    // Limpiar el resultado previo
     resultDiv.textContent = "";
 
     if (!input) {
