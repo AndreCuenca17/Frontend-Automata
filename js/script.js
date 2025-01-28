@@ -17,16 +17,23 @@ document.getElementById("validarButton").addEventListener("click", async () => {
 
         if (data.aceptada === "true") {
             resultDiv.innerHTML = `
-          <p class="result success">La cadena "${data.cadena}" es aceptada.</p>
+          <p class="result success">El binario "${data.cadena}" cumple con la condición.</p>
           <p><strong>Transiciones:</strong></p>
-          <pre>${data.informacion}</pre>
+          <pre class="informacion">${data.informacion}</pre>
         `;
         } else {
-            resultDiv.innerHTML = `
-          <p class="result error">La cadena "${data.cadena}" no es aceptada.</p>
-          <p><strong>Transiciones:</strong></p>
-          <pre>${data.informacion}</pre>
+
+            if (data.cadena === undefined) {
+                resultDiv.innerHTML = `
+          <p class="result error">La cadena "${document.getElementById("cadenaInput").value}" no es un binario.</p>    
         `;
+            } else {
+                resultDiv.innerHTML = `
+          <p class="result error">El binario "${data.cadena}" no cumple con la condición.</p>
+        `;
+            }
+
+
         }
     } catch (error) {
         resultDiv.textContent = "Hubo un error al comunicarse con el servidor.";

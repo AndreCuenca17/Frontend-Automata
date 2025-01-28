@@ -1,12 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Monserrat", sans-serif;
     background: #f9f9f9;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .container {
@@ -14,8 +14,12 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 400px;
+    width: clamp(200px, 70%, 800px);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -25,12 +29,13 @@ h1 {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: clamp(200px, 80%, 300px);
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: clamp(16px, 1.5vw, 18px);
+    text-align: center;
 }
 
 button {
@@ -50,7 +55,7 @@ button:hover {
 
 .result {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
 }
 
 .result.success {
@@ -59,4 +64,8 @@ button:hover {
 
 .result.error {
     color: #dc3545;
+}
+
+.informacion {
+    font-size: clamp(10px, 1.5vw, 18px);
 }
